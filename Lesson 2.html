@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CDL Coding Program</title>
+    </head>
+    <body>
+        
+        <h1>CDL Coding Program</h1>
+        <p id="ans"></p>
+
+        <button onclick="show('about')">About</button>
+        <button onclick="show('submath')">Maths</button>
+        <button onclick="show('subscience')">Science</button>
+
+        <div id="about">
+            <h2>About Section</h2>
+            <p>Welcome to the about page!</p>
+        </div>
+
+        <div id="submath">
+            <h2>Maths Section</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c05eOQZv760" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div id="subscience">
+            <h2>Science Section</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-YVVWituvM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            function add(a, b) {
+                return a + b;
+            }
+
+            document.getElementById("ans").innerHTML = add(5, 10);
+
+            document.getElementById("subscience").style.display = "none";
+            document.getElementById("submath").style.display = "none";
+            document.getElementById("about").style.display = "none";
+
+            function show(pageName) {
+                document.getElementById("submath").style.display = "none";
+                document.getElementById("subscience").style.display = "none";
+                document.getElementById("about").style.display = "none";
+
+                document.getElementById(pageName).style.display = "block";
+            }
+        </script>
+    </body>
+</html>
